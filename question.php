@@ -37,7 +37,7 @@ $repliesCount = count($data->replies);
     input {
       min-width: 100px;
     }
-    td.reply-cell {
+    tr.reply-row td.reply-cell {
       display: flex;
       align-items: center;
     }
@@ -83,7 +83,7 @@ $repliesCount = count($data->replies);
       </thead>
       <tbody>
         <?php if (!$hasAlreadyReplied) { ?>
-          <tr>
+          <tr class="reply-row">
             <td>
               <input
                 type="text"
