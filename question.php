@@ -4,6 +4,10 @@ require('init.php');
 
 $data = getData($_GET["id"]);
 
+if (!$data) {
+  die("Pas trouvé cette question déso...");
+}
+
 $hasAlreadyReplied = false;
 
 foreach($data->replies as $reply) {
